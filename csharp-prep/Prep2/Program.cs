@@ -15,15 +15,15 @@ class Program
         }
         else if (grade >= 80)
         {
-            Console.WriteLine("You scored an B");  
+            Console.WriteLine("You scored a B");  
         }
         else if (grade >= 70)
         {
-            Console.WriteLine("You scored an C");  
+            Console.WriteLine("You scored a C");  
         }
         else if (grade >= 60)
         {
-            Console.WriteLine("You scored an D");  
+            Console.WriteLine("You scored a D");  
         }
         else 
         {
