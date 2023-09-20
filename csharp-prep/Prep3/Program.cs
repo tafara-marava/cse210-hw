@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep3 World!");
-    }
+        string response = "yes";
+        
+        while (response == "yes"){
+        Console.WriteLine("Do you want to continue ");
+        response= Console.ReadLine();
+    }}
 }
