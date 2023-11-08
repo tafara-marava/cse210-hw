@@ -4,9 +4,18 @@ public class Program
     {
         Prompts prompts = new Prompts();
         Journal journal = new Journal();
+        Menu menu = new Menu();
 
-        while (true)
-        {
+      
+
+        int choice = 0;
+       
+        while (choice != 5){
+        menu.DisplayMenu();  
+        choice = int.Parse(Console.ReadLine());
+        if(choice == 1){
+            
+        
             string question = prompts.DisplayPrompt();
             if (string.IsNullOrWhiteSpace(question))
             {
@@ -18,7 +27,12 @@ public class Program
 
             Entry entry = new Entry(question, answer);
             journal.AddEntry(entry);
+        
         }
+        
+        }
+        
+       
 
         Console.WriteLine("Your journal entries:");
         journal.DisplayEntries();

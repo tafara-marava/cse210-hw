@@ -16,10 +16,13 @@ public class Menu
     
     int option = 0;
     public void DisplayMenu(){
+        Console.WriteLine("Please select one fo the following choices: ");
         foreach(string item in myList){
-            if (option == 1){
+
+            Console.WriteLine(item);
+            // if (option == 1){
                 
-            }
+            // }
         }
     }
     
