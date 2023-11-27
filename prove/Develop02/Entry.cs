@@ -37,6 +37,6 @@ public class Entry
     public string ToFileString()
     {
         // Convert the Entry to a string for saving to a file
-        return $"{_question}\n{_answer}\n";
+        return $"{_question} : {_answer}";
     }
 }

@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 public class Program
 {
     public static void Main(string[] args)
@@ -29,17 +31,26 @@ public class Program
             journal.AddEntry(entry);
         
         }
-        
+        else if (choice == 2){
+            Console.WriteLine("Your journal entries:");
+            journal.DisplayEntries();
+
         }
-        
-       
-
-        Console.WriteLine("Your journal entries:");
-        journal.DisplayEntries();
-
-        Console.Write("Enter the file path to save your journal entries (e.g., journal.txt): ");
+        else if (choice == 3){
+            Console.WriteLine("what is the file name? ");
+            string fileName = COns
+        }
+        else if (choice == 4){
+            Console.Write("Enter the file path to save your journal entries (e.g., journal.txt): ");
         string filePath = Console.ReadLine();
 
         journal.SaveToFile(filePath);
+        }
+        
+        }
+        
+
     }
+
 }
+

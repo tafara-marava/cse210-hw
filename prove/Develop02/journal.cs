@@ -31,4 +31,24 @@ public class Journal
         }
         Console.WriteLine($"Journal entries saved to {filePath}");
     }
+
+    public void LoadFile(string fileName){
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+
+foreach (string line in lines)
+{
+    string[] parts = line.Split(":");
+    // parts = ["what are you greatfe", "family"]
+
+    string question = parts[0];
+    string answer = parts[1];
+
+    // question = "what are you greatfe"
+    // answer = "family"
+
+    Entry entry = new Entry(question, answer);
+    AddEntry(entry);
+    // entry = new Entry ("what are ...", "Family")
+}
+    }
 }
