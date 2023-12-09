@@ -38,7 +38,7 @@ public class Program
         }
         else if (choice == 3){
             Console.WriteLine("what is the file name? ");
-            string fileName = COns
+            string fileName = Console.ReadLine();
         }
         else if (choice == 4){
             Console.Write("Enter the file path to save your journal entries (e.g., journal.txt): ");

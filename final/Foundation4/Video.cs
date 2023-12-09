@@ -15,7 +15,7 @@ class Video
         Title = title;
         Author = author;
         Length = length;
-        comments = new List<Comment>();
+        
     }
 
     public void AddComment(string commenterName, string text)
