@@ -5,12 +5,12 @@ class Address
     private string state;
     private string country;
 
-    public Address(string streetAddress, string city, string state, string country)
+    public Address(string _streetAddress, string _city, string _state, string _country)
     {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.state = state;
-        this.country = country;
+        _streetAddress = streetAddress;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
     public bool IsInUSA()

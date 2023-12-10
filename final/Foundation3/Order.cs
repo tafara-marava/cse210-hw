@@ -3,10 +3,10 @@ class Order
     private List<Product> products;
     private Customer customer;
 
-    public Order(Customer customer)
+    public Order(Customer _customer)
     {
-        this.products = new List<Product>();
-        this.customer = customer;
+        products = new List<Product>();
+        _customer = customer;
     }
 
     public void AddProduct(Product product)

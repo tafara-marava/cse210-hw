@@ -5,12 +5,12 @@ class Product
     private double price;
     private int quantity;
 
-    public Product(string name, string productId, double price, int quantity)
+    public Product(string _name, string _productId, double _price, int _quantity)
     {
-        this.name = name;
-        this.productId = productId;
-        this.price = price;
-        this.quantity = quantity;
+        _name = name;
+        _productId = productId;
+        _price = price;
+        _quantity = quantity;
     }
 
     public string GetName()

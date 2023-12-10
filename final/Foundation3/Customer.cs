@@ -3,10 +3,10 @@ class Customer
     private string name;
     private Address address;
 
-    public Customer(string name, Address address)
+    public Customer(string _name, Address _address)
     {
-        this.name = name;
-        this.address = address;
+        _name = name;
+        _address = address;
     }
 
     public string GetName()
