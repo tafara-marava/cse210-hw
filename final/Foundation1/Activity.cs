@@ -3,10 +3,10 @@ class Activity
     private DateTime date;
     protected int minutes;
 
-    public Activity(DateTime date, int minutes)
+    public Activity(DateTime _date, int _minutes)
     {
-        this.date = date;
-        this.minutes = minutes;
+        _date = date;
+        _minutes = minutes;
     }
 
     public virtual double GetDistance()

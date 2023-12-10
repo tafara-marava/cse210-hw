@@ -2,9 +2,9 @@ class Running : Activity
 {
     private double distance;
 
-    public Running(DateTime date, int minutes, double distance) : base(date, minutes)
+    public Running(DateTime date, int minutes, double _distance) : base(date, minutes)
     {
-        this.distance = distance;
+        _distance = distance;
     }
 
     public override double GetDistance()

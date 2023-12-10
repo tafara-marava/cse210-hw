@@ -2,9 +2,9 @@ class Cycling : Activity
 {
     private double speed;
 
-    public Cycling(DateTime date, int minutes, double speed) : base(date, minutes)
+    public Cycling(DateTime date, int minutes, double _speed) : base(date, minutes)
     {
-        this.speed = speed;
+        _speed = speed;
     }
 
     public override double GetSpeed()

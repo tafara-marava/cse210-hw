@@ -2,9 +2,9 @@ class Swimming : Activity
 {
     private int laps;
 
-    public Swimming(DateTime date, int minutes, int laps) : base(date, minutes)
+    public Swimming(DateTime date, int minutes, int _laps) : base(date, minutes)
     {
-        this.laps = laps;
+        _laps = laps;
     }
 
     public override double GetDistance()
