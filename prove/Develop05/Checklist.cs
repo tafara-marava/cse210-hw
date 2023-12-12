@@ -1,30 +1,32 @@
-public class Checklist : Goal
+class ChecklistGoal : Goal
 {
-    private int totalCompletions;
-    private int currentCompletions;
+    private int timesCompleted;
+    private int requiredTimes;
 
-    public Checklist(string name, int value, int totalCompletions) : base(name, value)
+    public ChecklistGoal(string name, int value, int requiredTimes)
     {
-        this.totalCompletions = totalCompletions;
-        this.currentCompletions = 0;
+        Name = name;
+        Value = value;
+        this.requiredTimes = requiredTimes;
     }
 
-    public override void Complete()
+    public override void RecordEvent()
     {
-        currentCompletions++;
-
-        if (currentCompletions == totalCompletions)
+        timesCompleted++;
+        Console.WriteLine($"Goal '{Name}' completed ({timesCompleted}/{requiredTimes})! You gained {Value} points.");
+        if (IsComplete())
         {
-            Console.WriteLine($"Goal '{name}' completed! Gained {value} points and a bonus of {value * totalCompletions} points.");
-        }
-        else
-        {
-            Console.WriteLine($"Recorded '{name}'! Gained {value} points. Completed {currentCompletions}/{totalCompletions} times.");
+            Console.WriteLine($"Bonus: You achieved the goal {requiredTimes} times! Bonus: {Value * 2} points.");
         }
     }
 
-    public override string GetStatus()
+    public override void DisplayStatus()
     {
-        return $"Completed {currentCompletions}/{totalCompletions} times";
+        Console.WriteLine($"[{timesCompleted}/{requiredTimes}] {Name}");
+    }
+
+    public override bool IsComplete()
+    {
+        return timesCompleted >= requiredTimes;
     }
 }
